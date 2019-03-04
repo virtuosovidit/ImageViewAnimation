@@ -14,6 +14,12 @@
 		2F12B6F9222D823B00F50937 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F12B6F7222D823B00F50937 /* LaunchScreen.storyboard */; };
 		2F12B704222D823B00F50937 /* ImageViewAnimationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F12B703222D823B00F50937 /* ImageViewAnimationTests.swift */; };
 		2F12B70F222D823B00F50937 /* ImageViewAnimationUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F12B70E222D823B00F50937 /* ImageViewAnimationUITests.swift */; };
+		2F12B71E222D83E300F50937 /* ImageTransitioningDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F12B71C222D83E300F50937 /* ImageTransitioningDelegate.swift */; };
+		2F12B71F222D83E300F50937 /* ImagePresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F12B71D222D83E300F50937 /* ImagePresentationController.swift */; };
+		2F12B721222D83F800F50937 /* ImagePresentationAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F12B720222D83F700F50937 /* ImagePresentationAnimator.swift */; };
+		2F12B724222D840600F50937 /* DismissInteractionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F12B722222D840600F50937 /* DismissInteractionController.swift */; };
+		2F12B725222D840600F50937 /* DismissImageAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F12B723222D840600F50937 /* DismissImageAnimation.swift */; };
+		2F12B728222D842700F50937 /* ImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F12B727222D842700F50937 /* ImageViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +53,12 @@
 		2F12B70A222D823B00F50937 /* ImageViewAnimationUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ImageViewAnimationUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2F12B70E222D823B00F50937 /* ImageViewAnimationUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewAnimationUITests.swift; sourceTree = "<group>"; };
 		2F12B710222D823B00F50937 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2F12B71C222D83E300F50937 /* ImageTransitioningDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageTransitioningDelegate.swift; sourceTree = "<group>"; };
+		2F12B71D222D83E300F50937 /* ImagePresentationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImagePresentationController.swift; sourceTree = "<group>"; };
+		2F12B720222D83F700F50937 /* ImagePresentationAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImagePresentationAnimator.swift; sourceTree = "<group>"; };
+		2F12B722222D840600F50937 /* DismissInteractionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DismissInteractionController.swift; sourceTree = "<group>"; };
+		2F12B723222D840600F50937 /* DismissImageAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DismissImageAnimation.swift; sourceTree = "<group>"; };
+		2F12B727222D842700F50937 /* ImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +111,8 @@
 			children = (
 				2F12B6EE222D823A00F50937 /* AppDelegate.swift */,
 				2F12B6F0222D823A00F50937 /* ViewController.swift */,
+				2F12B727222D842700F50937 /* ImageViewController.swift */,
+				2F12B726222D841000F50937 /* Image Transition */,
 				2F12B6F2222D823A00F50937 /* Main.storyboard */,
 				2F12B6F5222D823B00F50937 /* Assets.xcassets */,
 				2F12B6F7222D823B00F50937 /* LaunchScreen.storyboard */,
@@ -123,6 +137,18 @@
 				2F12B710222D823B00F50937 /* Info.plist */,
 			);
 			path = ImageViewAnimationUITests;
+			sourceTree = "<group>";
+		};
+		2F12B726222D841000F50937 /* Image Transition */ = {
+			isa = PBXGroup;
+			children = (
+				2F12B71C222D83E300F50937 /* ImageTransitioningDelegate.swift */,
+				2F12B71D222D83E300F50937 /* ImagePresentationController.swift */,
+				2F12B720222D83F700F50937 /* ImagePresentationAnimator.swift */,
+				2F12B723222D840600F50937 /* DismissImageAnimation.swift */,
+				2F12B722222D840600F50937 /* DismissInteractionController.swift */,
+			);
+			path = "Image Transition";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -256,7 +282,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2F12B71F222D83E300F50937 /* ImagePresentationController.swift in Sources */,
+				2F12B725222D840600F50937 /* DismissImageAnimation.swift in Sources */,
 				2F12B6F1222D823A00F50937 /* ViewController.swift in Sources */,
+				2F12B721222D83F800F50937 /* ImagePresentationAnimator.swift in Sources */,
+				2F12B724222D840600F50937 /* DismissInteractionController.swift in Sources */,
+				2F12B71E222D83E300F50937 /* ImageTransitioningDelegate.swift in Sources */,
+				2F12B728222D842700F50937 /* ImageViewController.swift in Sources */,
 				2F12B6EF222D823A00F50937 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
