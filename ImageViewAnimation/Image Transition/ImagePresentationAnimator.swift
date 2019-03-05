@@ -61,24 +61,4 @@ class ImagePresentationAnimator: NSObject, UIViewControllerAnimatedTransitioning
         })
         
     }
-    
-    func imageDimensions(masterFrame: CGRect, aspectRatio: CGFloat) -> CGSize {
-        
-        var width: CGFloat = 0
-        var height: CGFloat = 0
-        
-        let imageHeight = masterFrame.width/aspectRatio
-        if imageHeight > masterFrame.height {
-            width = masterFrame.height*aspectRatio
-            height = masterFrame.height
-            
-        }
-        else {
-            width = masterFrame.width
-            height = masterFrame.width/aspectRatio
-        }
-        
-        return CGSize.init(width: width, height: height)
-        
-    }
 }
