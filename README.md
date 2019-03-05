@@ -32,18 +32,10 @@ The image Transitioning Delegate file contains three functions, the first is a c
     }
 
 ## Presentation Animation
-In the presentation animation we first setup up a transformation to transform the image in the destination view controller to the size of the original frame in the source view controller. And then set the frame of the destination imageView to that of the source's imageView. We then animate these values to the their final values.
+In the presentation animation we first setup up the imageView properties in the destination view controller to match that of the imageView in the source view controller. And then set the frame of the destination imageView to that of the source's imageView. We then animate the frame to its final position.
 
-        let imageSize = imageDimensions(masterFrame: toViewController.view.frame,
-                                        aspectRatio: toViewController.aspectRatio)
-        
-        let transformationRatioX = fromViewController.imageView.frame.width/imageSize.width
-        let transformationRatioY = fromViewController.imageView.frame.height/imageSize.height
-        
-        let sizeTransform = CGAffineTransform.init(scaleX: transformationRatioX,
-                                                   y: transformationRatioY)
-        
-        toViewController.imageView.transform = sizeTransform
+        toViewController.imageView.clipsToBounds = true
+        toViewController.imageView.contentMode = .scaleAspectFill
         toViewController.imageView.frame = fromViewController.imageView.frame
 
 ## Setting up the Image View Controller
