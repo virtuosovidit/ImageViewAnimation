@@ -22,21 +22,8 @@ class ImagePresentationAnimator: NSObject, UIViewControllerAnimatedTransitioning
         
         let containerView = transitionContext.containerView
         
-        toViewController.view.alpha = 0
         toViewController.imageView.clipsToBounds = true
         toViewController.imageView.contentMode = .scaleAspectFill
-        
-        
-        let imageSize = imageDimensions(masterFrame: toViewController.view.frame,
-                                        aspectRatio: toViewController.aspectRatio)
-        
-        let transformationRatioX = fromViewController.imageView.frame.width/imageSize.width
-        let transformationRatioY = fromViewController.imageView.frame.height/imageSize.height
-        
-        let sizeTransform = CGAffineTransform.init(scaleX: transformationRatioX,
-                                                   y: transformationRatioY)
-        
-        toViewController.imageView.transform = sizeTransform
         toViewController.imageView.frame = fromViewController.imageView.frame
         
         
@@ -59,8 +46,6 @@ class ImagePresentationAnimator: NSObject, UIViewControllerAnimatedTransitioning
                        options: .curveEaseInOut,
                        animations: {
             
-                        toViewController.imageView.transform = CGAffineTransform.identity
-           
                         //Setting up the size of the imageView Frame
                         let width = toViewController.view.frame.width
                         let height = width/toViewController.aspectRatio
@@ -68,8 +53,8 @@ class ImagePresentationAnimator: NSObject, UIViewControllerAnimatedTransitioning
                         //Centered Vertically
                         let yPosition = (toViewController.view.frame.height - height)/2
                         
-                        toViewController.imageView.frame = CGRect(x: 0, y: yPosition, width: width, height: width/toViewController.aspectRatio)
-                        toViewController.view.alpha = 1
+                        toViewController.imageView.frame = CGRect(x: 0, y: yPosition,
+                                                                  width: width, height: width/toViewController.aspectRatio)
                         
         }, completion: { finished in
             transitionContext.completeTransition(finished)

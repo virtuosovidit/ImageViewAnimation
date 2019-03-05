@@ -31,9 +31,7 @@ class ImageViewController: UIViewController {
     var imageTransitioning: ImageTransitioningDelegate?
     
     override func viewWillAppear(_ animated: Bool) {
-        
         interactionController = DismissInteractionController.init(viewController: self)
-        
     }
 
 }

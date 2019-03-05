@@ -19,14 +19,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="beach" translatesAutoresizingMaskIntoConstraints="NO" id="itp-3S-btF">
-                                <rect key="frame" x="67.5" y="213.5" width="240" height="240"/>
+                                <rect key="frame" x="8" y="213.5" width="240" height="240"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="240" id="7EZ-UG-dFy"/>
                                     <constraint firstAttribute="width" secondItem="itp-3S-btF" secondAttribute="height" multiplier="1:1" id="80N-rc-hM5"/>
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="weP-D0-wZY">
-                                <rect key="frame" x="67.5" y="213.5" width="240" height="240"/>
+                                <rect key="frame" x="8" y="213.5" width="240" height="240"/>
                                 <connections>
                                     <segue destination="Cig-uN-qHk" kind="show" identifier="imageTransition" id="yeD-3f-eer"/>
                                 </connections>
@@ -36,10 +36,10 @@
                         <constraints>
                             <constraint firstItem="weP-D0-wZY" firstAttribute="centerX" secondItem="itp-3S-btF" secondAttribute="centerX" id="23o-K1-00h"/>
                             <constraint firstItem="weP-D0-wZY" firstAttribute="width" secondItem="itp-3S-btF" secondAttribute="width" id="5sO-bC-jkt"/>
+                            <constraint firstItem="itp-3S-btF" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="7Ea-OW-Qyi"/>
                             <constraint firstItem="weP-D0-wZY" firstAttribute="centerY" secondItem="itp-3S-btF" secondAttribute="centerY" id="Jlt-Rn-5Gw"/>
                             <constraint firstItem="weP-D0-wZY" firstAttribute="height" secondItem="itp-3S-btF" secondAttribute="height" id="Nnx-vb-Bm4"/>
-                            <constraint firstItem="itp-3S-btF" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="i5C-LV-vT4"/>
-                            <constraint firstItem="itp-3S-btF" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="nnt-4O-ziq"/>
+                            <constraint firstItem="itp-3S-btF" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="quM-vJ-Dju"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>

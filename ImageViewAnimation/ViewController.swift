@@ -18,16 +18,9 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-    }
-
-    override func viewWillAppear(_ animated: Bool) {
-        imageView.alpha = 1
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
-        imageView.alpha = 0
         
         imageTransitioning = ImageTransitioningDelegate()
         guard let imageVC = segue.destination as? ImageViewController else { return }
